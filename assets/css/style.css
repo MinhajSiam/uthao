@@ -16,8 +16,13 @@ body {
     }
 }
 
-div {
-    width: 100%;
+nav {
     height: 100px;
-    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 50%;
 }
