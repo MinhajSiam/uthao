@@ -8759,19 +8759,6 @@
                         Created By:
                         http://html5andbeyond.com/
                         */
-                        jquery(document).ready(function ($) {
-                            $(document).on('click', '.play-pause-btn', function () {
-                                if ($(this).attr('data-click') == 1) {
-                                    $(this).attr('data-click', 0);
-                                    $(this).html('<i class="fa fa-play"></i>');
-                                    $(this).prev('video.custom-video')[0].pause();
-                                } else {
-                                    $(this).attr('data-click', 1);
-                                    $(this).html('<i class="fa fa-pause"></i>');
-                                    $(this).prev('video.custom-video')[0].play();
-                                }
-                            });
-                        });
                         jQuery(document).ready(function ($) {
                             $(document).on('click', '.play-pause-btn', function () {
                                 if ($(this).attr('data-click') == 1) {
