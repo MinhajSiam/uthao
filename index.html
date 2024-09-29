@@ -4,28 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uthao</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Bike Rescue Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyZ1cFgjtuX0qymuQbMIm46zaGYcV5rhw&callback=initMap"
+        async defer></script>
 </head>
 
 <body>
+    <!-- Header and Navigation -->
     <header>
+        <h1>Bike Rescue Service (Uthao)</h1>
         <nav>
-            <img class="logo" src="assets/images/Uthao_logo_croped.jpg" alt="">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <a href="#">Home</a>
+            <a href="#">Find Service Points</a>
+            <a href="#">My Requests</a>
+            <a href="#" onclick="openModal('loginModal')">Login</a>
+            <a href="#" onclick="openModal('registerModal')">Register</a>
         </nav>
     </header>
-    <main>
-        <section>
-            <div></div>
-            <div></div>
-        </section>
-    </main>
-    <footer></footer>
 
+    <!-- Map Container -->
+    <section id="map-container">
+        <h2>Find Nearest Bike Servicing Points</h2>
+        <div id="map"></div>
+    </section>
 
+    <!-- Service Points List -->
+    <section id="service-list">
+        <h2>Available Services Near You</h2>
+        <ul id="service-points">
+            <!-- Dynamic Service Points will be added here -->
+        </ul>
+    </section>
 
-    <script src="https://kit.fontawesome.com/54a16c130a.js" crossorigin="anonymous"></script>
+    <!-- Modals for Login and Registration -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Bike Rescue Service. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
 </body>
 
 </html>
