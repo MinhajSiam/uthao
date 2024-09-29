@@ -3,31 +3,40 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-
+    background: #ececec;
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
     body {
         display: none;
     }
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #385170;
+    color: #ececec;
     padding: 1em 0;
     text-align: center;
 }
 
 header nav a {
-    color: #fff;
+    color: #ececec;
     margin: 0 15px;
     text-decoration: none;
 }
 
+header nav a:hover {
+    color: #9fd3c7;
+}
+
+h1,
+h2 {
+    color: #142d4c;
+}
+
 #map-container {
     padding: 2em;
+    background: #ececec;
 }
 
 #map {
@@ -38,6 +47,8 @@ header nav a {
 
 #service-list {
     padding: 2em;
+    background: #9fd3c7;
+    color: #142d4c;
 }
 
 #service-points {
@@ -46,14 +57,24 @@ header nav a {
 }
 
 #service-points li {
-    background: #fff;
+    background: #ececec;
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #385170;
+    color: #142d4c;
 }
 
 #service-points li button {
-    margin: 10px 5px;
+    background: #385170;
+    color: #ececec;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#service-points li button:hover {
+    background: #142d4c;
 }
 
 /* Modal Styling */
@@ -70,10 +91,11 @@ header nav a {
 }
 
 .modal-content {
-    background: #fff;
+    background: #ececec;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    border: 2px solid #142d4c;
 }
 
 .close {
@@ -81,11 +103,12 @@ header nav a {
     top: 10px;
     right: 10px;
     cursor: pointer;
+    color: #142d4c;
 }
 
 footer {
     text-align: center;
     padding: 1em;
-    background: #333;
-    color: #fff;
+    background: #385170;
+    color: #ececec;
 }
