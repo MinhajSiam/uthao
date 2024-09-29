@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Servicing App</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #ececec;
+        }
+
+        /* Color Palette */
+        :root {
+            --main-bg: #ececec;
+            --primary-color: #9fd3c7;
+            --secondary-color: #385170;
+            --accent-color: #142d4c;
+        }
+
+        header,
+        footer {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            overflow-y: auto;
+            margin-bottom: 70px;
+            /* Space for the footer */
+        }
+
+        .map-section {
+            background: var(--main-bg);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .map-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-point-card {
+            background: var(--primary-color);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-point-details {
+            color: var(--secondary-color);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Bike Servicing App</h1>
+    </header>
+
+    <div class="container">
+        <div class="map-section">
+            <h2>Nearby Bike Service Points</h2>
+            <!-- Placeholder Image for Map (In real app, integrate with Google Maps API) -->
+            <img src="https://via.placeholder.com/600x300?text=Map+View" alt="Map View">
+        </div>
+
+        <div class="service-point-card">
+            <div class="service-point-details">
+                <h3>Rapid Bike Services</h3>
+                <p>Location: South Dania, Dhaka</p>
+                <p>Rating: 4.5</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn">Call Now</button>
+                <button class="btn">Request Expert</button>
+            </div>
+        </div>
+
+        <div class="service-point-card">
+            <div class="service-point-details">
+                <h3>Speedy Motors</h3>
+                <p>Location: Jatrabari, Dhaka</p>
+                <p>Rating: 4.2</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn">Call Now</button>
+                <button class="btn">Request Expert</button>
+            </div>
+        </div>
+
+        <div class="service-point-card">
+            <div class="service-point-details">
+                <h3>Bike Rescue Hub</h3>
+                <p>Location: Shonir Akhra, Dhaka</p>
+                <p>Rating: 4.8</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn">Call Now</button>
+                <button class="btn">Request Expert</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Bike Servicing App | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
