@@ -4,73 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Rescue Service</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400&display=swap" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyZ1cFgjtuX0qymuQbMIm46zaGYcV5rhw&callback=initMap"
-        async defer></script>
+    <title>Bike Servicing App</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #ececec;
+        }
+
+        /* Color Palette */
+        :root {
+            --main-bg: #ececec;
+            --primary-color: #9fd3c7;
+            --secondary-color: #385170;
+            --accent-color: #142d4c;
+        }
+
+        header,
+        footer {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            overflow-y: auto;
+            margin-bottom: 70px;
+            /* Space for the footer */
+        }
+
+        .map-section {
+            background: var(--main-bg);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .map-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-point-card {
+            background: var(--primary-color);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-point-details {
+            color: var(--secondary-color);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* @media (min-width:768px) {
+            body {
+                display: none;
+            }
+        } */
+    </style>
 </head>
 
 <body>
-    <!-- Header and Navigation -->
     <header>
-        <h1> <span style="text-transform: uppercase;">Uthao</span> - A Bike Rescue Service</h1>
-        <nav>
-            <a href="app/index.html">App Version</a>
-            <a href="#">My Requests</a>
-            <a href="#" onclick="openModal('loginModal')">Login</a>
-            <a href="#" onclick="openModal('registerModal')">Register</a>
-        </nav>
+        <h1>Bike Servicing App</h1>
     </header>
 
-    <!-- Map Container -->
-    <section id="map-container">
-        <h2>Find Nearest Bike Servicing Points</h2>
-        <div id="map"></div>
-    </section>
+    <div class="container">
+        <div class="map-section">
+            <h2>Nearby Bike Service Points</h2>
+            <!-- Placeholder Image for Map (In real app, integrate with Google Maps API) -->
+            <img src="https://via.placeholder.com/600x300?text=Map+View" alt="Map View">
+        </div>
 
-    <!-- Service Points List -->
-    <section id="service-list">
-        <h2>Available Services Near You</h2>
-        <ul id="service-points">
-            <!-- Dynamic Service Points will be added here -->
-        </ul>
-    </section>
+        <div class="service-point-card">
+            <div class="service-point-details">
+                <h3>Rapid Bike Services</h3>
+                <p>Location: South Dania, Dhaka</p>
+                <p>Rating: 4.5</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn">Call Now</button>
+                <button class="btn">Request Expert</button>
+            </div>
+        </div>
 
-    <!-- Modals for Login and Registration -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="loginUsername" placeholder="Username" required>
-                <input type="password" id="loginPassword" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
+        <div class="service-point-card">
+            <div class="service-point-details">
+                <h3>Speedy Motors</h3>
+                <p>Location: Jatrabari, Dhaka</p>
+                <p>Rating: 4.2</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn">Call Now</button>
+                <button class="btn">Request Expert</button>
+            </div>
+        </div>
+
+        <div class="service-point-card">
+            <div class="service-point-details">
+                <h3>Bike Rescue Hub</h3>
+                <p>Location: Shonir Akhra, Dhaka</p>
+                <p>Rating: 4.8</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn">Call Now</button>
+                <button class="btn">Request Expert</button>
+            </div>
         </div>
     </div>
 
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('registerModal')">&times;</span>
-            <h2>Register</h2>
-            <form id="registerForm">
-                <input type="text" id="registerUsername" placeholder="Username" required>
-                <input type="password" id="registerPassword" placeholder="Password" required>
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2024 Bike Rescue Service. All rights reserved.</p>
+        <p>© 2024 Bike Servicing App | All rights reserved</p>
     </footer>
-
-    <!-- JavaScript File -->
-    <script src="app.js"></script>
 </body>
 
 </html>
